@@ -17,6 +17,9 @@
     <!-- We need to unpack this extension to be able run external python script -->
     <em:unpack>true</em:unpack>
 
+    <!-- This is an extension -->
+    <em:type>2</em:type>
+
     <!-- Firefox -->
     <em:targetApplication>
       <Description em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
