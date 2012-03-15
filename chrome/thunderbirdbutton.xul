@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="chrome://gtgtask/content/button.css"?>
+
+<!DOCTYPE overlay >
+<overlay id="gtgtask-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://gtgtask/content/utils.js"/>
+<script type="application/x-javascript" src="chrome://gtgtask/content/thunderbirdbutton.js"/>
+
+<toolbarpalette id="header-view-toolbar-palette">
+    <toolbarbutton id="gtgtask-button"
+      label="GTG Task"
+      tooltiptext="Create a task from this e-mail"
+      oncommand="gtgtask_thunderbird.createTask(event);"
+      class="toolbarbutton-1 msgHeaderView-button gtgtask"
+      />
+</toolbarpalette>
+
+</overlay>

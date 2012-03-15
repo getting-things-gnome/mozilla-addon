@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="chrome://gtgtask/content/button.css"?>
+
+<!DOCTYPE overlay >
+<overlay id="gtgtask-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://gtgtask/content/utils.js"/>
+<script type="application/x-javascript" src="chrome://gtgtask/content/firefoxbutton.js"/>
+
+<toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="gtgtask-button"
+      label="GTG Task"
+      tooltiptext="Create a task from this page"
+      oncommand="gtgtask_firefox.createTask()"
+      class="toolbarbutton-1 chromeclass-toolbar-additional gtgtask"
+      />
+</toolbarpalette>
+
+</overlay>

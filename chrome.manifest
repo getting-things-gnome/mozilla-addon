@@ -1,0 +1,7 @@
+content gtgtask chrome/
+
+# Firefox
+overlay	chrome://browser/content/browser.xul chrome://gtgtask/content/firefoxbutton.xul
+
+# Thunderbird mail
+overlay chrome://messenger/content/messenger.xul chrome://gtgtask/content/thunderbirdbutton.xul

@@ -1,0 +1,12 @@
+#gtgtask-button, #wrapper-gtgtask-button {
+    list-style-image: url("chrome://gtgtask/content/button.png");
+}
+
+/* CSS reference: rect(top, left, bottom, right) */
+.gtgtask {
+    -moz-image-region: rect( 0px 24px 24px  0px);
+}
+
+[iconsize="small"] .gtgtask {
+    -moz-image-region: rect( 0px 40px 16px 24px);
+}
