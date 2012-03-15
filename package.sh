@@ -8,4 +8,5 @@
 #
 # Created by Izidor Matušov <izidor.matusov@gmail.com>
 
+rm -f ../gtgtask.xpi
 zip -r9 ../gtgtask.xpi chrome/ chrome.manifest defaults/ install.rdf

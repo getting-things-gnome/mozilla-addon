@@ -5,11 +5,11 @@
     about="urn:mozilla:install-manifest"
 
     em:name="GTG Task Button"
-    em:description="Easily transform a page into a GTG task with one click"
+    em:description="Easily transform a page into a task for Getting Things GNOME! with a single click."
     em:creator="Izidor Matušov"
 
     em:id="gtg@fritalk.com"
-    em:version="1.0"
+    em:version="1.1"
     em:homepageURL="http://gtg.fritalk.com"
 
     em:iconURL="chrome://gtgtask/content/icon.png" >

@@ -19,6 +19,34 @@
 import dbus
 import sys
 
+class GTG:
+    """ Unified interface to different versions of GTG D-Bus """
+
+    def __init__(self):
+        try:
+            self.version = "0.2.9"
+            bus = dbus.SessionBus()
+            gtg_obj = bus.get_object('org.gnome.GTG', '/org/gnome/GTG')
+            self.gtg = dbus.Interface(gtg_obj, 'org.gnome.GTG')
+        except dbus.exceptions.DBusException, e:
+            # Use older version
+            self.version = "0.2.4"
+            bus = dbus.SessionBus()
+            gtg_obj = bus.get_object('org.GTG', '/org/GTG')
+            self.gtg = dbus.Interface(gtg_obj, 'org.GTG')
+
+    def new_task(self, title, message):
+        if self.version == "0.2.9":
+            return self.gtg.NewTask('Active', title, '', '', '', [], message, [])
+        else:
+            return self.gtg.new_task('Active', title, '', '', '', [], message, [])
+
+    def open_task(self, task_id):
+        if self.version == "0.2.9":
+            return self.gtg.OpenTaskEditor(task_id)
+        else:
+            return self.gtg.open_task_editor(task_id)
+
 def show_notification(title, message):
     try:
         import pynotify
@@ -45,11 +73,14 @@ if __name__ == "__main__":
     title = sys.argv[1]
     message = "\n".join(sys.argv[2:])
 
-    bus = dbus.SessionBus()
-    gtg_obj = bus.get_object('org.gnome.GTG', '/org/gnome/GTG')
-    gtg = dbus.Interface(gtg_obj, 'org.gnome.GTG')
+    try:
+        gtg = GTG()
+    except dbus.exceptions.DBusException, e:
+        show_notification("Failed to find GTG", "There is no D-Bus interface for GTG")
+        print "D-Bus exception:", e
+        sys.exit(1)
 
-    task =  gtg.NewTask('Active', title, '', '', '', [], message, [])
+    task = gtg.new_task(title, message)
     # if notification fails, open the task
     if force_editor or not show_notification("New GTG task added", title):
-        gtg.OpenTaskEditor(task['id'])
+        gtg.open_task(task['id'])
