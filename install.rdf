@@ -29,10 +29,5 @@
         em:minVersion="3.0" em:maxVersion="14.0a1" />
     </em:targetApplication>
 
-    <em:file>
-      <Description about="urn:mozilla:extension:gtgtask"
-        em:package="content/gtgtask/" />
-    </em:file>
-
   </Description>
 </RDF>
