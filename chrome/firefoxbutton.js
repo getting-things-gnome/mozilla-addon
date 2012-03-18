@@ -42,6 +42,15 @@ var gtgtask_firefox = {
     },
 
     /*
+     * Trigger creating a new task and afterwards show editor
+     *
+     * The user clicked on context menu.
+     */
+    createAndEditTask: function () {
+        gtgtask_utils.newGTGTask(["--force-editor"].concat(gtgtask_firefox.fetchTask()));
+    },
+
+    /*
      * Add our button to toolbar during the first load
      */
     initGTGButton: function () {
