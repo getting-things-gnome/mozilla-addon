@@ -9,8 +9,8 @@
     em:creator="Izidor Matušov"
 
     em:id="gtg@fritalk.com"
-    em:version="1.1"
-    em:homepageURL="http://gtg.fritalk.com"
+    em:version="1.3"
+    em:homepageURL="http://gtgnome.net"
 
     em:iconURL="chrome://gtgtask/content/icon.png" >
 
@@ -23,13 +23,13 @@
     <!-- Firefox -->
     <em:targetApplication>
       <Description em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
-        em:minVersion="3.0" em:maxVersion="14.0a1" />
+        em:minVersion="3.0" em:maxVersion="22.0" />
     </em:targetApplication>
 
     <!-- Thunderbird -->
     <em:targetApplication>
       <Description em:id="{3550f703-e582-4d05-9a08-453d09bdfdc6}"
-        em:minVersion="3.0" em:maxVersion="14.0a1" />
+        em:minVersion="3.0" em:maxVersion="22.0" />
     </em:targetApplication>
 
   </Description>

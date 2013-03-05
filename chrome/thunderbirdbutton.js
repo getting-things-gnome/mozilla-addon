@@ -46,7 +46,7 @@ var gtgtask_thunderbird = {
      */
     createTask: function (event) {
         gtgtask_utils.newGTGTask(gtgtask_thunderbird.fetchTask());
-        MsgArchiveSelectedMessages(event);
+        // MsgArchiveSelectedMessages(event);
         RestoreFocusAfterHdrButton();
     },
 
