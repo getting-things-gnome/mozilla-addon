@@ -1,4 +1,4 @@
-# Add-On for Getting Things GNOME! in Mozilla
+# GTG's Add-On for Mozilla
 
 Add-on for:
 
