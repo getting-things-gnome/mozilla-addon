@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="chrome://gtgtask/content/button.css"?>
 
-<!DOCTYPE overlay >
+<!DOCTYPE overlay SYSTEM "chrome://gtgtask/locale/thunderbirdbutton.dtd">
 <overlay id="gtgtask-overlay"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
@@ -10,8 +10,8 @@
 
 <toolbarpalette id="header-view-toolbar-palette">
     <toolbarbutton id="gtgtask-button"
-      label="GTG Task"
-      tooltiptext="Create a task from this e-mail"
+      label="&toolbarbutton.label;"
+      tooltiptext="&toolbarbutton.tooltiptext;"
       oncommand="gtgtask_thunderbird.createTask(event);"
       class="toolbarbutton-1 msgHeaderView-button gtgtask"
       />

@@ -1,5 +1,8 @@
 content gtgtask chrome/
 
+locale gtgtask en-US chrome/locale/en-US/
+locale gtgtask fr-FR chrome/locale/fr-FR/
+
 # Firefox
 overlay	chrome://browser/content/browser.xul chrome://gtgtask/content/firefoxbutton.xul
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="chrome://gtgtask/content/button.css"?>
 
-<!DOCTYPE overlay >
+<!DOCTYPE overlay SYSTEM "chrome://gtgtask/locale/firefoxbutton.dtd">
 <overlay id="gtgtask-overlay"
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
@@ -14,14 +14,14 @@
 
 <toolbarpalette id="BrowserToolbarPalette">
     <toolbarbutton id="gtgtask-button"
-      label="GTG Task"
-      tooltiptext="Create a task from this page"
+      label="&toolbarbutton.label;"
+      tooltiptext="&toolbarbutton.tooltiptext;"
       oncommand="gtgtask_firefox.createTask()"
       class="toolbarbutton-1 chromeclass-toolbar-additional gtgtask"
       type="menu-button"
       >
         <menupopup id="gtgtaskMenu">
-            <menuitem label="Create and edit task" command="cmd_forceEditor" />
+            <menuitem label="&menupopup_menuitem.label;" command="cmd_forceEditor" />
         </menupopup>
     </toolbarbutton>
 </toolbarpalette>
