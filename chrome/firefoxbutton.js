@@ -58,7 +58,7 @@ var gtgtask_firefox = {
         var prefs = Components.classes["@mozilla.org/preferences-service;1"]
                             .getService(Components.interfaces.nsIPrefService)
                             .getBranch("extensions.gtgtask.");
-                    
+
         if (prefs.getBoolPref("firstRun")) {
             gtgtask_utils.addButtonToToolbar("nav-bar", "gtgtask-button", "");
             prefs.setBoolPref("firstRun", false);
